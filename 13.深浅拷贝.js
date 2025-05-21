@@ -36,7 +36,7 @@ const deepclone = (value) => {
         //遍历对象
         for (let key in obj) {
             if (obj.hasOwnProperty(key))
-                copyobj[key] = obj[key]
+                copyobj[key] = _deepclone(obj[key])
         }
         return copyobj
     }
